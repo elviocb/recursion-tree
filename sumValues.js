@@ -29,9 +29,16 @@ tree.children[1].addChild(new Tree(7));
 tree.children[1].addChild(new Tree(8));
 
 // Implemtent the function to sum the values of the tree
-function sumValues(){
-  // your code here
+function sumValues(node){
+    var result = node.value;
+    for (var i = 0; i < node.children.length; i++) {
+        var child = node.children[i];
+        result += sumValues(child);
+    }
+    return result;
 }
+
+sumValues(tree);
 
 // ** Extra credit: Implement the same function using the Tree's prototype
 Tree.prototype.sumValues = function(){
