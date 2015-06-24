@@ -42,7 +42,11 @@ sumValues(tree);
 
 // ** Extra credit: Implement the same function using the Tree's prototype
 Tree.prototype.sumValues = function(){
-  // your code here
+    var result = this.value;
+    this.children.forEach(function(child){
+        result += child.sumValues();
+    })
+    return result;
 }
 
 
