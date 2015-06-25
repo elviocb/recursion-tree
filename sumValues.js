@@ -19,6 +19,11 @@ Tree.prototype.addChild = function(node) {
   this.children.push(node);
 }
 
+// Implement the function to sum the values of the tree
+Tree.prototype.sumValues = function(){
+  // your code here
+}
+
 var tree = new Tree(2);
 
 tree.addChild(new Tree(3));
@@ -28,13 +33,8 @@ tree.addChild(new Tree(6));
 tree.children[1].addChild(new Tree(7));
 tree.children[1].addChild(new Tree(8));
 
-// Implemtent the function to sum the values of the tree
+// ** Extra credit: Implement the same function without using the prototype
 function sumValues(){
-  // your code here
-}
-
-// ** Extra credit: Implement the same function using the Tree's prototype
-Tree.prototype.sumValues = function(){
   // your code here
 }
 
